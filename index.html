@@ -1,92 +1,209 @@
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
- 
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
- 
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <FORM> element to your page.             -->
-<!--  ----------------------------------------------------------------------  -->
- 
-<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL000003RZSK" method="POST">
- 
-<input type=hidden name="oid" value="00DgL000003RZSK">
-<input type=hidden name="retURL" value="http://">
- 
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-<!--  these lines if you wish to test in debug mode.                          -->
-<!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail"                                  -->
-<!--  value="sakthivel.p@gwcdata.ai">                                         -->
-<!--  ----------------------------------------------------------------------  -->
- 
-<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
- 
-<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
- 
-<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
- 
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
- 
-Product Category:<select  id="00NgL00000xyzg9" name="00NgL00000xyzg9" title="Product Category"><option value="">--None--</option><option value="Bikes">Bikes</option>
-<option value="Components">Components</option>
-<option value="Accessories">Accessories</option>
-<option value="Clothing">Clothing</option>
-</select><br>
- 
-Store layout & experience:<select  id="00NgL00000xz0Qv" name="00NgL00000xz0Qv" title="Store layout & experience"><option value="">--None--</option><option value="Very Satisfied">Very Satisfied</option>
-<option value="Satisfied">Satisfied</option>
-<option value="Neutral">Neutral</option>
-<option value="Dissatisfied">Dissatisfied</option>
-</select><br>
- 
-Product availability & variety:<select  id="00NgL00000xykKY" name="00NgL00000xykKY" title="Product availability & variety"><option value="">--None--</option><option value="Very Satisfied">Very Satisfied</option>
-<option value="Satisfied">Satisfied</option>
-<option value="Neutral">Neutral</option>
-<option value="Dissatisfied">Dissatisfied</option>
-</select><br>
- 
-Staff behavior:<select  id="00NgL00000xz24X" name="00NgL00000xz24X" title="Staff behavior"><option value="">--None--</option><option value="Very Satisfied">Very Satisfied</option>
-<option value="Satisfied">Satisfied</option>
-<option value="Neutral">Neutral</option>
-<option value="Dissatisfied">Dissatisfied</option>
-</select><br>
- 
-Cleanliness & comfort:<select  id="00NgL00000xyzeZ" name="00NgL00000xyzeZ" title="Cleanliness & comfort"><option value="">--None--</option><option value="Very Satisfied">Very Satisfied</option>
-<option value="Satisfied">Satisfied</option>
-<option value="Neutral">Neutral</option>
-<option value="Dissatisfied">Dissatisfied</option>
-</select><br>
- 
-Reasons for dissatisfaction:<select  id="00NgL00000xz2u9" name="00NgL00000xz2u9" title="Reasons for dissatisfaction"><option value="">--None--</option><option value="Very Satisfied">Very Satisfied</option>
-<option value="Satisfied">Satisfied</option>
-<option value="Neutral">Neutral</option>
-<option value="Dissatisfied">Dissatisfied</option>
-</select><br>
- 
-Pricing & offers:<select  id="00NgL00000xz2e1" name="00NgL00000xz2e1" title="Pricing & offers"><option value="">--None--</option><option value="Very Satisfied">Very Satisfied</option>
-<option value="Satisfied">Satisfied</option>
-<option value="Neutral">Neutral</option>
-<option value="Dissatisfied">Dissatisfied</option>
-</select><br>
- 
-Rating:<select  id="00NgL00000xy901" name="00NgL00000xy901" title="Rating"><option value="">--None--</option><option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-</select><br>
- 
-Feedback:<textarea  id="00NgL00000xyyP9" name="00NgL00000xyyP9" type="text" wrap="soft"></textarea><br>
- 
-<input type="submit" name="submit">
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    form {
+      background: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 9999;
+      font-size: 16px;
+      animation: fadeInOut 3s forwards;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(-20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      form {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="popup" id="popupMsg">Feedback submitted successfully!</div>
+
+<form id="feedbackForm">
+  <label for="first_name">First Name</label>
+  <input id="first_name" maxlength="40" name="first_name" type="text" />
+
+  <label for="last_name">Last Name</label>
+  <input id="last_name" maxlength="80" name="last_name" type="text" />
+
+  <label for="phone">Phone</label>
+  <input id="phone" maxlength="40" name="phone" type="text" />
+
+  <label for="email">Email</label>
+  <input id="email" maxlength="80" name="email" type="text" />
+
+  <label for="product">Product Category</label>
+  <select id="product">
+    <option value="">--None--</option>
+    <option value="Bikes">Bikes</option>
+    <option value="Components">Components</option>
+    <option value="Accessories">Accessories</option>
+    <option value="Clothing">Clothing</option>
+  </select>
+
+  <label for="layout">Store layout & experience</label>
+  <select id="layout">
+    <option value="">--None--</option>
+    <option value="Very Satisfied">Very Satisfied</option>
+    <option value="Satisfied">Satisfied</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Dissatisfied">Dissatisfied</option>
+  </select>
+
+  <label for="availability">Product availability & variety</label>
+  <select id="availability">
+    <option value="">--None--</option>
+    <option value="Very Satisfied">Very Satisfied</option>
+    <option value="Satisfied">Satisfied</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Dissatisfied">Dissatisfied</option>
+  </select>
+
+  <label for="staff">Staff behavior</label>
+  <select id="staff">
+    <option value="">--None--</option>
+    <option value="Very Satisfied">Very Satisfied</option>
+    <option value="Satisfied">Satisfied</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Dissatisfied">Dissatisfied</option>
+  </select>
+
+  <label for="cleanliness">Cleanliness & comfort</label>
+  <select id="cleanliness">
+    <option value="">--None--</option>
+    <option value="Very Satisfied">Very Satisfied</option>
+    <option value="Satisfied">Satisfied</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Dissatisfied">Dissatisfied</option>
+  </select>
+
+  <label for="pricing">Pricing & offers</label>
+  <select id="pricing">
+    <option value="">--None--</option>
+    <option value="Very Satisfied">Very Satisfied</option>
+    <option value="Satisfied">Satisfied</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Dissatisfied">Dissatisfied</option>
+  </select>
+
+  <label for="rating">Rating</label>
+  <select id="rating">
+    <option value="">--None--</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+
+  <label for="feedback">Feedback</label>
+  <textarea id="feedback" name="feedback"></textarea>
+
+  <input type="submit" value="Submit">
 </form>
+
+<script>
+  const form = document.getElementById("feedbackForm");
+  const popup = document.getElementById("popupMsg");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form from submitting
+
+    // Show the popup
+    popup.style.display = "block";
+
+    // Hide popup after 3 seconds
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 3000);
+
+    // Clear form fields after 0.5 seconds
+    setTimeout(() => {
+      form.reset();
+    }, 500);
+  });
+</script>
+
+</body>
+</html>
